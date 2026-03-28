@@ -1,0 +1,40 @@
+{{ partial "head.html" . }}
+<body>
+  <a class="skip-link" href="#main">Skip to main</a>
+  <main id="main">
+    <div class="content">
+      {{ partial "header.html" . }}
+
+      {{ .Content }}
+
+      {{ $pages := sort (where .Site.RegularPages "Section" "ctf-writeups") "File.Path" "asc" }}
+
+      {{ $ctfs := slice }}
+      {{ range $pages }}
+        {{ $path := replace .File.Path "\\" "/" }}
+        {{ $parts := split $path "/" }}
+        {{ if ge (len $parts) 4 }}
+          {{ $ctfs = $ctfs | append (index $parts 1) }}
+        {{ end }}
+      {{ end }}
+
+      {{ range $ctf := uniq $ctfs }}
+        <h2>{{ replace $ctf "-" " " | title }}</h2>
+        <ul>
+          {{ range $pages }}
+            {{ $path := replace .File.Path "\\" "/" }}
+            {{ $parts := split $path "/" }}
+            {{ if and (ge (len $parts) 4) (eq (index $parts 1) $ctf) }}
+              {{ $category := index $parts 2 }}
+              <li>
+                <a href="{{ .RelPermalink }}">[{{ $category }}] {{ .Title }}</a>
+              </li>
+            {{ end }}
+          {{ end }}
+        </ul>
+      {{ end }}
+
+    </div>
+  </main>
+</body>
+</html>

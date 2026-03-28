@@ -1,0 +1,6 @@
+[submodule "themes/maverick"]
+	path = themes/maverick
+	url = https://github.com/canhtran/maverick.git
+[submodule "content/ctf-writeups"]
+	path = content/ctf-writeups
+	url = https://github.com/ssung099/CTF-Writeups.git

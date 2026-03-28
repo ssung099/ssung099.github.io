@@ -1,0 +1,28 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'SeungHyun Sung'
+theme = 'maverick'
+
+[params]
+    name = 'SeungHyun Sung'
+    description = 'My Blog'
+    items = 5
+
+[menu]
+    [[menu.main]]
+        identifier = 'home'
+        name = 'Home'
+        url = '/'
+        weight = 1
+
+    [[menu.main]]
+        identifier = 'posts'
+        name = 'Posts'
+        url = '/posts/'
+        weight = 2
+
+    [[menu.main]]
+        identifier = 'ctf-writeups'
+        name = 'CTF Write-Ups'
+        url = '/ctf-writeups/'
+        weight = 3
