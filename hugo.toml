@@ -10,8 +10,8 @@ theme = 'maverick'
 
 [menu]
     [[menu.main]]
-        identifier = 'home'
-        name = 'Home'
+        identifier = 'about'
+        name = 'About'
         url = '/'
         weight = 1
 
@@ -26,3 +26,9 @@ theme = 'maverick'
         name = 'CTF Write-Ups'
         url = '/ctf-writeups/'
         weight = 3
+    
+    [[menu.main]]
+        identifier = 'contact'
+        name = 'Contact'
+        url = '/contact/'
+        weight = 4
