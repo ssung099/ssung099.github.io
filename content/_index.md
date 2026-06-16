@@ -5,6 +5,9 @@ I'm interested in learning more about Offensive Security and partaking in CTF Co
 **Decompiler Research Assistant** - Present  
 *Columbia University*
 
+**IoT Security Extern** - Mar 2026 - Jun 2026
+*Extern, Hydroficient*
+
 **Vulnerability Analysis Research Assistant** - Oct 2025 - Dec 2025  
 *Columbia University*
 
@@ -34,3 +37,7 @@ I'm interested in learning more about Offensive Security and partaking in CTF Co
 
 **Bachelors of Science in Computer Science - Cybersecurity Track**  
 *University of Maryland - College Park*
+
+## Certificates
+
+**Google Cybersecurity Professional Certificate**
