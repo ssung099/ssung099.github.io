@@ -25,9 +25,9 @@ theme = 'maverick'
         weight = 3
     
     [[menu.main]]
-        identifier = 'projects'
-        name = 'Projects'
-        url = "/projects/"
+        identifier = 'portfolio'
+        name = 'Portfolio'
+        url = "/portfolio/"
         weight = 4
     
     [[menu.main]]

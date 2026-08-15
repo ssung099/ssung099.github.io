@@ -1,30 +1,60 @@
 ---
-title: Projects
+title: Security Portfolio
 ---
 
-Here are some of the projects I've worked on — feel free to explore and reach out if anything catches your eye.
+Security-focused work spanning offensive testing, vulnerability research, and personal projects.
+
+<!-- ## tiny-dec — RISC-V Decompiler Research
+
+Ongoing research project building a 19-stage RV32I-to-C decompiler pipeline with a Ghidra-inspired p-code IR, documented as a public blog series to better understand the black box of a decompiler.
+
+**Skills:** binary lifting, IR design, control-flow recovery, compiler theory, technical writing
+
+**Link:** [Blog series](https://ssung.xyz) -->
+
+
+## Incident Response — Payroll Phishing Campaign
+
+Investigated a simulated payroll-themed credential phishing campaign for a fictional client — spearphishing → credential harvesting → account takeover — from detection through containment.
+
+**Skills:** KQL threat hunting (Microsoft Sentinel / Azure Data Explorer), email authentication analysis (SPF/DKIM/DMARC), phishing triage, MITRE ATT&CK mapping, incident reporting
+
+**MITRE ATT&CK:** T1566.002, T1598.003, T1078.004
+
+**Link:** [GitHub](https://github.com/ssung099/cloudora-payroll-phishing-investigation)
+
+## Incident Response — Executive Account Takeover
+
+Investigated a simulated executive account takeover for a fictional client — password spray → account compromise → MFA persistence → BEC staging — from detection through containment.
+
+**Skills:** KQL threat hunting (Microsoft Sentinel / Azure Data Explorer), sign-in log analysis, MITRE ATT&CK mapping, incident reporting
+
+**MITRE ATT&CK:** T1110.003, T1078, T1098.005, T1564.008
+
+**Link:** [GitHub](https://github.com/ssung099/cloudora-executive-ato-investigation)
+
+## IoT Security Assessment — Hydroficient
+
+Assessed and hardened an MQTT-based IoT device pipeline for a fictional hotel client, from transport security through anomaly detection.
+
+**Skills:** mTLS / certificate-based device auth, replay-attack defense, TLS performance benchmarking, anomaly detection (Isolation Forest), security assessment reporting
+
+**Link:** [Github](https://github.com/ssung099/hydroficient-iot-externship)
+
+## Vulnerability Research Labs
+
+Reproduced and root-caused real-world CVEs end-to-end, from crash to exploit to patch analysis. 
+
+**Covers:** CVE-2026-4946 (Ghidra RCE), CVE-2014-6271 (Shellshock), CVE-2022-42889 (Text4Shell)
+
+**Skills:** vulnerability analysis, exploit development, patch diffing, reverse engineering
+
+**Link:** [Github](https://github.com/ssung099/Vulnerability-Labs)
 
 ## CVE Notifier
 
-A Discord bot that monitors the [NVD (National Vulnerability Database)](https://nvd.nist.gov/) and posts new and updated CVEs to a Discord channel in real time. It runs in two modes — syncing the full database on startup, then polling every 30 minutes for new or updated CVEs. Supports a `/cve` slash command to look up any CVE by ID.
+A Discord bot that syncs the full NVD database and polls it for new/updated CVEs, posting real-time alerts with a `/cve` lookup command.
 
-**GitHub:** [cve-notifier](https://github.com/ssung099/cve-notifier)  
-**Tech Stack:** Python, Discord.py, SQLite
+**Skills:** API integration, database sync/polling architecture, bot development
 
-Here is an example of a CVE notification embed posted to Discord, showing the CVE ID, description, publish time, CVSS score, severity, and CWE classification.
-![CVE Notifier](/images/projects/cve_message.png)
-
-## BitTorrent Client
-
-A Python BitTorrent client that downloads files from peers using the BitTorrent protocol, verifying each piece against the torrent metadata before writing to disk. Once the download is complete, the client seeds the file back to the network. Includes a local testing client for verifying seeding behavior directly on the same machine without going through a tracker.
-
-**GitHub:** [BitTorrent-Client](https://github.com/ssung099/BitTorrent-Client)  
-**Tech Stack:** Python
-
-Here is the client downloading `debian-13.4.0-arm64-netinst.iso` from peers.
-![BitTorrent Client downloading](/images/projects/bittorrent.png)
-
-The local tester connects directly to the client once it enters seeding mode, and successfully downloads the same file from our client.
-![BitTorrent local tester](/images/projects/bittorrent_local.png)
-
-Both downloads produce the same SHA512 hash, which also matches Debian's [official SHA512SUMS](https://cdimage.debian.org/debian-cd/current/arm64/iso-cd/SHA512SUMS), confirming end to end file integrity.
+**Link:** [GitHub](https://github.com/ssung099/cve-notifier)
