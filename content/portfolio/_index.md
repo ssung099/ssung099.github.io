@@ -12,6 +12,15 @@ Ongoing research project building a 19-stage RV32I-to-C decompiler pipeline with
 
 **Link:** [Blog series](https://ssung.xyz) -->
 
+## SOC Triage Shift — Cloudora Alert Queue
+
+Ran a full alert triage queue for a fictional client — 12 alerts across identity, endpoint, network, and email — each worked to a defensible verdict with severity and action.
+
+**Result:** 2 true positives, 1 escalation, 7 false positives (root-caused), 1 held pending evidence, 1 duplicate closed
+
+**Skills:** alert triage methodology, hypothesis-driven investigation, log/context correlation, severity scoring, ServiceNow ticketing, MITRE ATT&CK mapping
+
+**Link:** [GitHub](https://github.com/ssung099/cloudora-triage-shift)
 
 ## Incident Response — Payroll Phishing Campaign
 
