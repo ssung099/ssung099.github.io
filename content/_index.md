@@ -42,4 +42,4 @@ I'm interested in learning more about Offensive Security and partaking in CTF Co
 
 **Google Cybersecurity Professional Certificate**
 
-**eJPT (in Progress)**
+**eJPT** (in Progress)
