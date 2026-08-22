@@ -12,6 +12,16 @@ Ongoing research project building a 19-stage RV32I-to-C decompiler pipeline with
 
 **Link:** [GitHub](https://github.com/ZhangZhuoSJTU/tiny-dec) <!-- [Blog Series](https://ssung.xyz) -->
 
+## Web Application Penetration Test — OWASP Juice Shop
+
+Conducted a full web application penetration test against OWASP Juice Shop, identifying 10 findings across authentication, access control, and input validation, including two critical vulnerabilities enabling account takeover and admin privilege escalation.
+
+**Result:** 2 critical, 5 high, 3 medium findings, each documented with reproduction steps, CVSS v4.0 scoring, and remediation guidance
+
+**Skills:** SQL injection, broken access control / IDOR, input validation testing, DOM XSS, Burp Suite, CVSS v4.0 scoring, penetration test reporting
+
+**Link:** [GitHub](https://github.com/ssung099/web-app-pentest-report)
+
 ## SOC Triage Shift — Cloudora Alert Queue
 
 Ran a full alert triage queue for a fictional client — 12 alerts across identity, endpoint, network, and email — each worked to a defensible verdict with severity and action.
