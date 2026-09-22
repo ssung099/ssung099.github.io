@@ -3,27 +3,26 @@
   <a class="skip-link" href="#main">Skip to main</a>
   <main id="main">
     <div class="content">
-      {{ partial "header.html" . }}
+        {{ partial "header.html" . }}
 
-      <h2> CTF Write-Ups </h2>
-      <p> Here are the write-ups I wrote for some of the challenges I solved across various CTF competitions. Feel free to contact me with any feedback. </p>
-      {{ .Content }}
+        <h2> CTF Write-Ups </h2>
+        <p> Here are the write-ups I wrote for some of the challenges I solved across various CTF competitions. Feel free to contact me with any feedback. </p>
+        {{ .Content }}
 
-      {{ $pages := sort (where .Site.RegularPages "Section" "ctf-writeups") "Date" "desc" }}
+        {{ $pages := sort (where .Site.RegularPages "Section" "ctf-writeups") "Date" "desc" }}
 
-      <ul>
+        <ul>
         {{ range $pages }}
-          {{ $path := replace .File.Path "\\" "/" }}
-          {{ $parts := split $path "/" }}
-          {{ if ge (len $parts) 5 }}
-            {{ $ctf := replace (index $parts 1) "-" " " | title }}
-            {{ $category := (index $parts 2) }}
+            {{ $ctf := index .Params.tags 0 }}
+            {{ $category := index .Params.categories 0 }}
+
             <li>
-              <a href="{{ .RelPermalink }}">{{ $ctf }} — [{{ $category }}] {{ .Title }}</a>
+            <a href="{{ .RelPermalink }}">
+                {{ $ctf }} — [{{ $category }}] {{ .Title }}
+            </a>
             </li>
-          {{ end }}
         {{ end }}
-      </ul>
+        </ul>
 
     </div>
   </main>
