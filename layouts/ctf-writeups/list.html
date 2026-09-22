@@ -13,14 +13,16 @@
 
         <ul>
         {{ range $pages }}
-            {{ $ctf := index .Params.tags 0 }}
-            {{ $category := index .Params.categories 0 }}
+            {{ if ne .File.LogicalName "README.md" }}
+                {{ $ctf := index .Params.tags 0 }}
+                {{ $category := index .Params.categories 0 }}
 
-            <li>
-            <a href="{{ .RelPermalink }}">
-                {{ $ctf }} — [{{ $category }}] {{ .Title }}
-            </a>
-            </li>
+                <li>
+                <a href="{{ .RelPermalink }}">
+                    {{ $ctf }} — [{{ $category }}] {{ .Title }}
+                </a>
+                </li>
+            {{ end }}
         {{ end }}
         </ul>
 
