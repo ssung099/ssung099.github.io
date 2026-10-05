@@ -13,8 +13,8 @@ theme = 'maverick'
 
 [menu]
     [[menu.main]]
-        identifier = 'about'
-        name = 'About'
+        identifier = 'home'
+        name = 'Home'
         url = '/'
         weight = 1
 
@@ -29,10 +29,4 @@ theme = 'maverick'
         name = 'Portfolio'
         url = "/portfolio/"
         weight = 4
-    
-    [[menu.main]]
-        identifier = 'contact'
-        name = 'Contact'
-        url = '/contact/'
-        weight = 5
 
