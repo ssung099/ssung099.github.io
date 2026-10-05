@@ -21,9 +21,8 @@ Feel free to connect with me on [**LinkedIn**](https://www.linkedin.com/in/seung
 **Neural Audio Localization Research Assistant** - Aug 2024 - May 2025  
 *iCosMos Lab - University of Maryland - College Park*
 
----
-
 ## CTF Participation
+
 **CSAW CTF 2026 Quals** - 70th / 505 teams
 *Team: CUCyber*
 
@@ -38,8 +37,6 @@ Feel free to connect with me on [**LinkedIn**](https://www.linkedin.com/in/seung
 
 **LACTF 2026** - 140th / 955 teams  
 *Team: CUCyber*
-
----
 
 ## Education
 
