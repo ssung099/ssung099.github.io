@@ -10,7 +10,7 @@ Ongoing research project building a 19-stage RV32I-to-C decompiler pipeline with
 
 **Skills:** binary lifting, IR design, control-flow recovery, compiler theory, technical writing
 
-**Link:** [GitHub](https://github.com/ZhangZhuoSJTU/tiny-dec) <!-- [Blog Series](https://ssung.xyz) -->
+**Links:** [GitHub](https://github.com/ZhangZhuoSJTU/tiny-dec) [Blog Series](decompilation.education)
 
 ## Web Application Penetration Test — OWASP Juice Shop
 
