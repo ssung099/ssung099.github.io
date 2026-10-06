@@ -1,33 +1,76 @@
 {{ partial "head.html" . }}
+
 <body>
   <a class="skip-link" href="#main">Skip to main</a>
+
   <main id="main">
     <div class="content">
-        {{ partial "header.html" . }}
+      {{ partial "header.html" . }}
 
-        <h2> CTF Write-Ups </h2>
-        <p> Here are the write-ups I wrote for some of the challenges I solved across various CTF competitions. Feel free to contact me with any feedback. </p>
-        {{ .Content }}
+      <h2>CTF Write-Ups</h2>
+      <p>
+        Here are the write-ups I wrote for some of the challenges I solved
+        across various CTF competitions. Feel free to contact me with any feedback.
+      </p>
 
-        {{ $pages := sort (where .Site.RegularPages "Section" "ctf-writeups") "Date" "desc" }}
+      {{ .Content }}
 
-        <ul>
-        {{ range $pages }}
-            {{ if ne .File.LogicalName "README.md" }}
-                {{ $ctf := index .Params.tags 0 }}
-                {{ $category := index .Params.categories 0 }}
+      {{ $pages := sort (where .Site.RegularPages "Section" "ctf-writeups") "Date" "desc" }}
+      {{ $pages = where $pages "File.LogicalName" "ne" "README.md" }}
 
-                <li>
-                <a href="{{ .RelPermalink }}">
-                    {{ $ctf }} — [{{ $category }}] {{ .Title }}
-                </a>
-                </li>
-            {{ end }}
+      {{/* Collect CTF names in order of their newest writeup. */}}
+      {{ $ctfs := slice }}
+      {{ range $pages }}
+        {{ $tags := .Params.tags | default (slice "Other") }}
+        {{ $ctf := index $tags 0 }}
+        {{ if not (in $ctfs $ctf) }}
+          {{ $ctfs = $ctfs | append $ctf }}
         {{ end }}
-        </ul>
+      {{ end }}
 
+      {{ range $ctf := $ctfs }}
+        <details class="ctf-group">
+          <summary>{{ $ctf }}</summary>
+
+          <ul>
+            {{ range $pages }}
+              {{ $tags := .Params.tags | default (slice "Other") }}
+              {{ if eq (index $tags 0) $ctf }}
+                {{ $categories := .Params.categories | default (slice "Uncategorized") }}
+                <li>
+                  <a href="{{ .RelPermalink }}">
+                    [{{ index $categories 0 }}] {{ .Title }}
+                  </a>
+                </li>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </details>
+      {{ end }}
     </div>
   </main>
+
+  <style>
+    .ctf-group {
+      margin: 1rem 0;
+    }
+
+    .ctf-group > summary {
+      display: list-item;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .ctf-group > ul {
+      margin-top: 0.75rem;
+      padding-left: 1.5rem;
+    }
+
+    .ctf-group li {
+      margin-bottom: 0.4rem;
+    }
+  </style>
 </body>
 
 </html>
