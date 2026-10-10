@@ -23,7 +23,7 @@ Feel free to connect with me on [**LinkedIn**](https://www.linkedin.com/in/seung
 
 ## CTF Participation
 
-**CSAW CTF 2026 Quals** - 70th / 505 teams
+**CSAW CTF 2026 Quals** - 70th / 505 teams  
 *Team: CUCyber*
 
 **Incognito 7.0** - 26th / 277 teams  
