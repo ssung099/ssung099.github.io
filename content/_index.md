@@ -23,9 +23,7 @@ Feel free to connect with me on [**LinkedIn**](https://www.linkedin.com/in/seung
 
 ## CTF Participation
 
-**CSAW CTF 2026**  
-- *Qualifiers*: 70th / 505 teams
-- *Finals*: 13th / 46 teams (7th / 14 in US-Canada)
+**CSAW CTF 2026** - *Qualifiers* : 70th / 505 teams &middot; *Finals* : 13th / 46 teams (7th / 14 in US-Canada)
 *Team: CUCyber*
 
 **Incognito 7.0** - 26th / 277 teams  
